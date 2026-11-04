@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment Analyzer</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <main>
+        <h1>YouTube Sentiment Analyzer</h1>
+
+        <button id="analyzeButton">
+            Analyser les commentaires
+        </button>
+
+        <p id="status">Prêt.</p>
+
+        <div class="stats">
+            <p>Positif : <span id="positive">0%</span></p>
+            <p>Neutre : <span id="neutral">0%</span></p>
+            <p>Négatif : <span id="negative">0%</span></p>
+        </div>
+
+        <select id="filter">
+            <option value="all">Tous</option>
+            <option value="1">Positifs</option>
+            <option value="0">Neutres</option>
+            <option value="-1">Négatifs</option>
+        </select>
+
+        <div id="results"></div>
+
+        <button id="themeButton">Mode sombre</button>
+        <button id="copyButton">Copier les résultats</button>
+    </main>
+
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+body {
+    width: 380px;
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+    color: #202b45;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+button, select {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#analyzeButton {
+    width: 100%;
+    background: #2457d6;
+    color: white;
+    border: none;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.comment {
+    background: white;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+body.dark {
+    background: #172033;
+    color: white;
+}
+
+body.dark .comment,
+body.dark .stats {
+    background: #27344d;
+    color: white;
+}

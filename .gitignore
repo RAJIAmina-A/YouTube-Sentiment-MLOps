@@ -8,8 +8,6 @@ __pycache__/
 venv/
 
 # Models
-models/*.joblib
-models/*.pkl
 
 # Logs
 logs/

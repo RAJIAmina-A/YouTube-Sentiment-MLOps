@@ -1,0 +1,14 @@
+vide                   -> Neutre   conf=0.90
+espaces                -> Neutre   conf=0.90
+très court             -> Neutre   conf=0.90
+un mot                 -> Positif  conf=1.00
+très long              -> Positif  conf=1.00
+emojis seuls           -> Neutre   conf=0.90
+emojis + texte         -> Positif  conf=1.00
+arabe                  -> Neutre   conf=0.90
+darija                 -> Neutre   conf=0.70
+français               -> Neutre   conf=0.89
+mélange                -> Positif  conf=0.93
+chiffres               -> Neutre   conf=0.90
+caractères spéciaux    -> Neutre   conf=0.90
+URL seule              -> Neutre   conf=0.82

@@ -1,0 +1,72 @@
+============================= test session starts ==============================
+platform linux -- Python 3.14.2, pytest-9.2.0, pluggy-1.7.0 -- /workspaces/YouTube-Sentiment-MLOps/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /workspaces/YouTube-Sentiment-MLOps
+plugins: anyio-4.16.0
+collecting ... collected 12 items
+
+tests/test_model.py::test_accuracy 
+               precision    recall  f1-score   support
+
+          -1       0.83      0.80      0.81      1647
+           0       0.86      0.96      0.91      2507
+           1       0.93      0.85      0.89      3145
+
+    accuracy                           0.88      7299
+   macro avg       0.87      0.87      0.87      7299
+weighted avg       0.88      0.88      0.88      7299
+
+Matrice de confusion :
+ [[1317  151  179]
+ [  50 2419   38]
+ [ 226  240 2679]]
+PASSED
+tests/test_model.py::test_f1_par_classe PASSED
+tests/test_model.py::test_cas_limites[] PASSED
+tests/test_model.py::test_cas_limites[ok] PASSED
+tests/test_model.py::test_cas_limites[texte2] PASSED
+tests/test_model.py::test_cas_limites[\U0001f60d\U0001f60d\U0001f60d\U0001f525\U0001f525] PASSED
+tests/test_model.py::test_cas_limites[Super vid\xe9o ! \u0645\u0628\u0627\u0631\u0627\u0629 \u0631\u0627\u0626\u0639\u0629, tr\xe8s bien] PASSED
+tests/test_model.py::test_cas_limites[!!!??? ###] PASSED
+tests/test_model.py::test_temps_inference_50 
+Inférence 50 commentaires : 2.6 ms
+PASSED
+tests/test_model_extra.py::test_cas_limites_detail 
+vide                   -> Neutre   conf=0.90
+espaces                -> Neutre   conf=0.90
+très court             -> Neutre   conf=0.90
+un mot                 -> Positif  conf=1.00
+très long              -> Positif  conf=1.00
+emojis seuls           -> Neutre   conf=0.90
+emojis + texte         -> Positif  conf=1.00
+arabe                  -> Neutre   conf=0.90
+darija                 -> Neutre   conf=0.70
+français               -> Neutre   conf=0.89
+mélange                -> Positif  conf=0.93
+chiffres               -> Neutre   conf=0.90
+caractères spéciaux    -> Neutre   conf=0.90
+URL seule              -> Neutre   conf=0.82
+PASSED
+tests/test_model_extra.py::test_rapport_complet 
+Accuracy : 0.8789
+
+              precision    recall  f1-score   support
+
+          -1      0.827     0.800     0.813      1647
+           0      0.861     0.965     0.910      2507
+           1      0.925     0.852     0.887      3145
+
+    accuracy                          0.879      7299
+   macro avg      0.871     0.872     0.870      7299
+weighted avg      0.881     0.879     0.878      7299
+
+Matrice de confusion (lignes = réel, colonnes = prédit, ordre -1/0/1) :
+[[1317  151  179]
+ [  50 2419   38]
+ [ 226  240 2679]]
+PASSED
+tests/test_model_extra.py::test_temps_inference_mediane 
+Batch 50 : médiane=1.5 ms, moyenne=1.5 ms, p95=1.9 ms
+PASSED
+
+============================== 12 passed in 2.01s ==============================

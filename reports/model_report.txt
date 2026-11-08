@@ -1,0 +1,16 @@
+Accuracy : 0.8789
+
+              precision    recall  f1-score   support
+
+          -1      0.827     0.800     0.813      1647
+           0      0.861     0.965     0.910      2507
+           1      0.925     0.852     0.887      3145
+
+    accuracy                          0.879      7299
+   macro avg      0.871     0.872     0.870      7299
+weighted avg      0.881     0.879     0.878      7299
+
+Matrice de confusion (lignes = réel, colonnes = prédit, ordre -1/0/1) :
+[[1317  151  179]
+ [  50 2419   38]
+ [ 226  240 2679]]

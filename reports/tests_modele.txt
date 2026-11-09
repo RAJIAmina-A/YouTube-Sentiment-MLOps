@@ -29,7 +29,7 @@ tests/test_model.py::test_cas_limites[\U0001f60d\U0001f60d\U0001f60d\U0001f525\U
 tests/test_model.py::test_cas_limites[Super vid\xe9o ! \u0645\u0628\u0627\u0631\u0627\u0629 \u0631\u0627\u0626\u0639\u0629, tr\xe8s bien] PASSED
 tests/test_model.py::test_cas_limites[!!!??? ###] PASSED
 tests/test_model.py::test_temps_inference_50 
-Inférence 50 commentaires : 2.6 ms
+Inférence 50 commentaires : 1.8 ms
 PASSED
 tests/test_model_extra.py::test_cas_limites_detail 
 vide                   -> Neutre   conf=0.90
@@ -66,7 +66,7 @@ Matrice de confusion (lignes = réel, colonnes = prédit, ordre -1/0/1) :
  [ 226  240 2679]]
 PASSED
 tests/test_model_extra.py::test_temps_inference_mediane 
-Batch 50 : médiane=1.5 ms, moyenne=1.5 ms, p95=1.9 ms
+Batch 50 : médiane=1.5 ms, moyenne=1.5 ms, p95=2.0 ms
 PASSED
 
-============================== 12 passed in 2.01s ==============================
+============================= 12 passed in 14.88s ==============================

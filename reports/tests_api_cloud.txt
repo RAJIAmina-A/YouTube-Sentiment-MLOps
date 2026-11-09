@@ -1,0 +1,54 @@
+============================= test session starts ==============================
+platform linux -- Python 3.14.2, pytest-9.2.0, pluggy-1.7.0 -- /workspaces/YouTube-Sentiment-MLOps/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /workspaces/YouTube-Sentiment-MLOps
+plugins: anyio-4.16.0
+collecting ... collected 22 items
+
+tests/test_api.py::test_health 
+/health -> {'status': 'ok', 'model_loaded': True}
+PASSED
+tests/test_api.py::test_batch_tailles[1] 
+Batch 1 : 66 ms
+PASSED
+tests/test_api.py::test_batch_tailles[10] 
+Batch 10 : 79 ms
+PASSED
+tests/test_api.py::test_batch_tailles[50] 
+Batch 50 : 59 ms
+PASSED
+tests/test_api.py::test_batch_tailles[100] 
+Batch 100 : 104 ms
+PASSED
+tests/test_api.py::test_batch_vide PASSED
+tests/test_api.py::test_donnees_invalides[payload0] PASSED
+tests/test_api.py::test_donnees_invalides[payload1] PASSED
+tests/test_api.py::test_donnees_invalides[payload2] PASSED
+tests/test_api.py::test_donnees_invalides[payload3] PASSED
+tests/test_api_extra.py::test_health_modele_charge PASSED
+tests/test_api_extra.py::test_structure_reponse PASSED
+tests/test_api_extra.py::test_ordre_conserve PASSED
+tests/test_api_extra.py::test_limite_101_commentaires PASSED
+tests/test_api_extra.py::test_commentaire_vide[comments0] PASSED
+tests/test_api_extra.py::test_commentaire_vide[comments1] PASSED
+tests/test_api_extra.py::test_commentaire_vide[comments2] PASSED
+tests/test_api_extra.py::test_commentaire_vide[comments3] PASSED
+tests/test_api_extra.py::test_non_json PASSED
+tests/test_api_extra.py::test_cors_preflight PASSED
+tests/test_api_extra.py::test_cas_limites_via_api 
+très court             -> 200 Neutre   conf=0.904
+très long              -> 200 Positif  conf=0.9999
+emojis seuls           -> 200 Neutre   conf=0.904
+emojis + texte         -> 200 Positif  conf=0.9993
+arabe                  -> 200 Neutre   conf=0.904
+darija                 -> 200 Neutre   conf=0.7028
+mélange FR/AR/EN       -> 200 Positif  conf=1.0
+caractères spéciaux    -> 200 Neutre   conf=0.904
+URL seule              -> 200 Neutre   conf=0.8154
+mention                -> 200 Positif  conf=0.9835
+PASSED
+tests/test_api_extra.py::test_temps_batch_50 
+Batch 50 : serveur médiane=1.3 ms | total médiane=63 ms, max=74 ms
+PASSED
+
+============================== 22 passed in 3.44s ==============================

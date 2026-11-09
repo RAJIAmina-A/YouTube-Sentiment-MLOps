@@ -9,16 +9,16 @@ tests/test_api.py::test_health
 /health -> {'status': 'ok', 'model_loaded': True}
 PASSED
 tests/test_api.py::test_batch_tailles[1] 
-Batch 1 : 4 ms
+Batch 1 : 75 ms
 PASSED
 tests/test_api.py::test_batch_tailles[10] 
-Batch 10 : 3 ms
+Batch 10 : 19 ms
 PASSED
 tests/test_api.py::test_batch_tailles[50] 
-Batch 50 : 5 ms
+Batch 50 : 4 ms
 PASSED
 tests/test_api.py::test_batch_tailles[100] 
-Batch 100 : 5 ms
+Batch 100 : 7 ms
 PASSED
 tests/test_api.py::test_batch_vide PASSED
 tests/test_api.py::test_donnees_invalides[payload0] PASSED
@@ -48,7 +48,7 @@ URL seule              -> 200 Neutre   conf=0.8154
 mention                -> 200 Positif  conf=0.9835
 PASSED
 tests/test_api_extra.py::test_temps_batch_50 
-Batch 50 : serveur médiane=1.1 ms | total médiane=4 ms, max=8 ms
+Batch 50 : serveur médiane=1.1 ms | total médiane=4 ms, max=5 ms
 PASSED
 
-============================== 22 passed in 0.28s ==============================
+============================== 22 passed in 0.75s ==============================
